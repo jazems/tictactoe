@@ -1,0 +1,35 @@
+﻿1st check-in: Developing a model/outline of how the UI will be structured (component hierarchies, deciding how to use state + props, etc.). Write in a .txt file and submit for review~
+
+
+
+
+Components & Props:
+
+
+Start (OPTIONAL, leaving out for now)
+* Props: handleStart method
+* Waits for text input for player names, then enables submit button which fires handleStart()
+
+
+Game
+* Renders 9 squares 
+* Props: click event handler (propagated to children squares), board array
+
+
+Square 
+* Props: board position/index, value [x/o], click event handler, running total (player 1 wins - player 2 wins)
+* When square is clicked, square index passed into handleClick(index)
+
+
+* End
+* Props: handleEnd() method, winner name, playAgain() method, restart() method
+* handleEnd(): displays winning player’s name, called after 3 in a row
+* playAgain(): calls Game and Square but persists tally of wins
+* restart(): calls Game and Square but restarts tally of wins (0-0)
+
+
+
+
+Hooks:
+* UseState
+* Overall TikTakToe hook that tracks all controller-related data (status, current player etc)
