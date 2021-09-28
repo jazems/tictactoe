@@ -1,6 +1,6 @@
 import Board from "./Board";
 import Result from "./Result";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 /* Calculates winner based on square values. */
 function calculateWinner(squares: any) {
@@ -59,6 +59,10 @@ const Game = () => {
     setTurn("X");
   };
 
+  const handleResetScore = () => {
+    setScore([0, 0]);
+  };
+
   /* If there is a winner, this hook updates the winner and score state. */
   useEffect(() => {
     if (winner) {
@@ -79,13 +83,13 @@ const Game = () => {
   });
 
   return (
-    <>
+    <div className="gameContainer">
       <div className="score">
-        {score[0]} - {score[1]}
+        <span className="p1"> {score[0]}</span> - <span className="p2"> {score[1]}</span>
       </div>
-      {!winner && <Board onClick={handleClick} board={squares} />}
-      {winner && <Result winner={winner} reset={handleReset} />}
-    </>
+      {!winner && <Board onClick={handleClick} board={squares} turn={turn} />}
+      {winner && <Result winner={winner} reset={handleReset} resetScore={handleResetScore} />}
+    </div>
   );
 };
 
