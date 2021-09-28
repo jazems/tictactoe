@@ -1,13 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
-    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #373b52;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.gameContainer {
+  justify-content: center;
+  text-align: center;
 }
 
 .board {
@@ -22,9 +30,56 @@ code {
   border: 1px;
   height: 100px;
   width: 100px;
+  border-radius: 20%;
   text-align: center;
+  font-family: "Varela Round";
+  background-color: #626887;
 }
 
 .score {
   text-align: center;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.result {
+  text-align: center;
+  color: white;
+  font-size: 72px;
+}
+
+.reset {
+  font-family: "Varela Round";
+  font-size: 18px;
+  background-color: #262a3f;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 15px;
+  width: 150px;
+  position: relative;
+  z-index: 0;
+}
+
+.resetScore {
+  font-family: "Varela Round";
+  background-color: transparent;
+  text-decoration: underline;
+  border: none;
+  color: white;
+  font-size: 16px;
+}
+
+.p1 {
+  color: #547ce4;
+}
+
+.p2 {
+  color: #c08de9;
+}
+
+.turn {
+  font-size: 25px;
+  padding-bottom: 15px;
 }
